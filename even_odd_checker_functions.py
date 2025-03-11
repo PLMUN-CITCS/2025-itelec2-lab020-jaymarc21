@@ -1,6 +1,13 @@
-# Main program execution
-user_number = get_user_input()  # Get input from user
-result = check_even_odd(user_number)  # Determine if even or odd
+def check_even_odd(number):
+    if number % 2 == 0:
+        print(f"{number} is an Even number.")
+    else:
+        print(f"{number} is an Odd number.")
 
-# Display the result
-print(f"The number {user_number} is {result}.")
+while True:
+    try:
+        user_input = int(input("Enter an integer: "))
+        check_even_odd(user_input)
+    except ValueError:
+        print("Please enter a valid integer.")
+        continue
